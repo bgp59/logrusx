@@ -9,7 +9,7 @@
 // 	defer logger.RestoreLog()
 // }
 
-package logrsux_testutils
+package logrusx_testutils
 
 import (
 	"io"
