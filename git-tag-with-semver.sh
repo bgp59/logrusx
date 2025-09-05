@@ -47,8 +47,11 @@ if ! check-git-state.sh; then
 fi
 
 # The git tag must include the sub-directory path to the tag:
-git tag $force $semver testutils/$semver 
-git push $force origin tag $semver testutils/$semver
+for t in $semver testutils/$semver; do
+    git tag $force $t
+    git push $force origin tag $t
+done
+
 
 
  
